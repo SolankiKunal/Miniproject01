@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+      /* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8f9fc;
+  color: #222;
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+.nav {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav__logo h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+.nav__logo span {
+  color: #ff5e00;
+}
+
+.nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #ff5e00;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+
+.hero {
+  width: 100%;
+  height: 90vh;
+  background: url("https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg")
+    no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  color: white;
+}
+
+.hero__headings-container h3 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.hero__headings-container h3 span {
+  color: #ff5e00;
+}
+
+.hero__main-headings {
+  font-size: 70px;
+  letter-spacing: 2px;
+}
+
+.main-span {
+  color: #ff5e00;
+}
+
+.hero__headings-container p {
+  margin: 10px 0 20px;
+  font-size: 18px;
+}
+
+.main-btn {
+  padding: 12px 30px;
+  background: #ff5e00;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  background: #ff3b00;
+}
+
+/* ---------------- HEADINGS ---------------- */
+
+.main-headings {
+  text-align: center;
+  margin: 50px 0 20px;
+  font-size: 38px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ---------------- SERVICES ---------------- */
+
+.services {
+  padding: 40px 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-one {
+  background-image: url("https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg");
+}
+
+.img-two {
+  background-image: url("https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg");
+}
+
+.img-three {
+  background-image: url("https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg");
+}
+
+.card p {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ---------------- WHY US ---------------- */
+
+.why-us {
+  margin: 60px auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.lists-container {
+  width: 50%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-number {
+  width: 40px;
+  height: 40px;
+  background: #ff5e00;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.list-info {
+  font-size: 18px;
+}
+
+.owner-image-container {
+  width: 45%;
+}
+
+.owner-image {
+  width: 100%;
+  height: 350px;
+  background: url("https://images.pexels.com/photos/1743227/pexels-photo-1743227.jpeg")
+    no-repeat center/cover;
+  border-radius: 12px;
+}
+
+/* ---------------- PROJECT DETAILS ---------------- */
+
+.project-details {
+  width: 90%;
+  margin: auto;
+}
+
+.project-details__container-left,
+.project-details__container-right {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0;
+  align-items: center;
+}
+
+.project-details .details {
+  width: 45%;
+}
+
+.project-details .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project-details .img-container {
+  width: 40%;
+}
+
+.project-details-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-one { background-image: url("https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg"); }
+.img-two { background-image: url("https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg"); }
+.img-three { background-image: url("https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"); }
+
+/* ---------------- FORM ---------------- */
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 50px 0;
+}
+
+form input {
+  padding: 12px 15px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-btn {
+  text-decoration: none;
+  background: #ff5e00;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+}
+
+.form-btn:hover {
+  background: #ff3b00;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+  background: #e8e4e4;
+  padding: 30px;
+  text-align: center;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer a:hover {
+  color: #ff5e00;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+  .why-us, 
+  .project-details__container-left,
+  .project-details__container-right {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lists-container, .details, .owner-image-container, .img-container {
+    width: 100%;
+  }
+
+  .nav {
+    padding: 20px 20px;
+  }
+
+  .hero {
+    padding-left: 20px;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form input {
+    width: 90%;
+  }
+}
+
+    </style>
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <div class="nav__logo">
+        <h1>D<span>H</span></h1>
+      </div>
+      <ul>
+        <li class="list-items"><a href="#">Home</a></li>
+        <li class="list-items"><a href="#services">Services</a></li>
+        <li class="list-items"><a href="#why-us">Why Us?</a></li>
+        <li class="list-items"><a href="#project-details">Project Details</a></li>
+      </ul>
+    </nav>
+    <header class="hero">
+      <section class="hero__headings-container">
+        <h3>Build <span>Your</span></h3>
+        <h1 class="hero__main-headings">
+          DREAM <span class="main-span">HOME</span>
+        </h1>
+        <p>WE CONSTRUCT YOUR FUTURE</p>
+        <a href="#" class="main-btn">Learn More</a>
+      </section>
+    </header>
+
+    <h1 class="main-headings center">
+      OUR <span class="main-span">SERVICES</span>
+    </h1>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <!-- CARDS -->
+      <section class="cards">
+        <div class="card">
+          <div class="card-image img-one"></div>
+          <p>Construction</p>
+        </div>
+        <div class="card">
+          <div class="card-image img-two"></div>
+          <p>ARCHITECTURE PLANING</p>
+        </div>
+        <div class="card">
+          <div class="card-image img-three"></div>
+          <p>CONSULTANCY</p>
+        </div>
+      </section>
+    </section>
+
+    <h1 class="main-headings">WHY CHOOSE<span class="main-span"> US?</span></h1>
+
+    <!-- WHY US -->
+    <section class="why-us" id="why-us">
+      <div class="lists-container">
+        <div class="list">
+          <div class="list-number">
+            <p>1</p>
+          </div>
+          <p class="list-info">HIGH QUALIFIED & TECHNICAL PROFESSIONALS</p>
+        </div>
+        <div class="list">
+          <div class="list-number">
+            <p>2</p>
+          </div>
+          <p class="list-info">ADVANCE PLANING</p>
+        </div>
+        <div class="list">
+          <div class="list-number">
+            <p>3</p>
+          </div>
+          <p class="list-info">STABILITY RESOURCES & EXPERTIES</p>
+        </div>
+        <div class="list">
+          <div class="list-number">
+            <p>4</p>
+          </div>
+          <p class="list-info">PASSION, INTEGRITY, & PUNCTUALITY</p>
+        </div>
+        <div class="list">
+          <div class="list-number">
+            <p>5</p>
+          </div>
+          <p class="list-info">BREADTH OF SERVICES</p>
+        </div>
+      </div>
+      <div class="owner-image-container">
+        <div class="owner-image"></div>
+      </div>
+    </section>
+
+    <h1 class="main-headings center">
+      PROJECT <span class="main-span">#DETAILS</span>
+    </h1>
+
+    <!-- PROJECT DETAILS -->
+    <section class="project-details" id="project-details">
+      <section class="project-details__container-left">
+        <div class="img-container">
+          <div class="card-image project-details-img img-one"></div>
+        </div>
+        <section class="details">
+          <p class="title">ARCHITECTURE DESIGN</p>
+          <div class="list">
+            <div class="list-number">
+              <p>1</p>
+            </div>
+            <p class="list-info">2D & 3D MODELING</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>2</p>
+            </div>
+            <p class="list-info">INTERIAL & EXTERIOR DESIGN</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>3</p>
+            </div>
+            <p class="list-info">LANDSCAPING & OUTDOOR GARDENING</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>4</p>
+            </div>
+            <p class="list-info">
+              ELECTRICAL, PLUMBING & SEWERAGE DRAWING PLANE.
+            </p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>5</p>
+            </div>
+            <p class="list-info">SOIL INVESTIGATION</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="project-details__container-right">
+        <section class="details">
+          <p class="title">CONSTRUCTION</p>
+
+          <div class="list">
+            <div class="list-number">
+              <p>1</p>
+            </div>
+            <p class="list-info">RESIDENTIAL & COMMERCIAL PROJECTS</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>2</p>
+            </div>
+            <p class="list-info">TURNKEY PROJECT (WITH MATERIAL)</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>3</p>
+            </div>
+            <p class="list-info">LANDSCAPING & OUTDOOR GARDENING</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>4</p>
+            </div>
+            <p class="list-info">DEMOLATION</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>5</p>
+            </div>
+            <p class="list-info">RENOVATION & RE-CONSTRUCTION</p>
+          </div>
+        </section>
+        <div class="img-container">
+          <div class="card-image project-details-img img-two"></div>
+        </div>
+      </section>
+
+
+      <section class="project-details__container-left">
+        <div class="img-container">
+          <div class="card-image project-details-img img-three"></div>
+        </div>
+        <section class="details">
+          <p class="title">REAL ESTATE</p>
+          <div class="list">
+            <div class="list-number">
+              <p>1</p>
+            </div>
+            <p class="list-info">
+              B - 17 MULTI GARDEN</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>2</p>
+            </div>
+            <p class="list-info">PARK VIEW CITY</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>3</p>
+            </div>
+            <p class="list-info">BEAUTY OF HILLS</p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>4</p>
+            </div>
+            <p class="list-info">
+              FAISAL MARGALLAH CITY.
+            </p>
+          </div>
+          <div class="list">
+            <div class="list-number">
+              <p>5</p>
+            </div>
+            <p class="list-info">BLUE WORLD CITY</p>
+          </div>
+        </section>
+    </section>
+
+    <form>
+      <input type="text" placeholder="Your name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <a href="#" class="form-btn">Submit</a>
+    </form>
+
+    <footer>
+      <strong> Create by Kunal </strong>
+      
+    </footer>
+  </body>
+</html>
